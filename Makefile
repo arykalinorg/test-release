@@ -27,5 +27,5 @@ build:
 
 release:
 	echo $$RELEASE_VERSION
-	./ghr_v0.13.0_linux_amd64/ghr -prerelease -n $$RELEASE_VERSION -body="$$(cat ./release.txt)" $$RELEASE_VERSION bin/
+	ghr -prerelease -n $$RELEASE_VERSION -body="$$(cat ./release.txt)" $$RELEASE_VERSION bin/
 
