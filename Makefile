@@ -5,11 +5,7 @@ VERSION=`git describe --abbrev=0 --tags`
 endif
 
 ifdef RELEASE_VERSION
-ifdef BUILD_NUMBER
-VERSION=$(RELEASE_VERSION)+$(BUILD_NUMBER)
-else
 VERSION=$(RELEASE_VERSION)
-endif
 endif
 BUILD_DIR=./
 BIN_DIR=bin
