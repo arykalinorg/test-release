@@ -22,7 +22,7 @@ build:
 	env GOOS=windows GOARCH=amd64 go build $(GO_LDFLAGS) -o $(BIN_DIR)/$$(basename $$PWD)-$(VERSION).exe $(BUILD_DIR)
 	env  GOOS=windows GOARCH=386   go build $(GO_LDFLAGS) -o $(BIN_DIR)/$$(basename $$PWD)86-$(VERSION).exe $(BUILD_DIR)
 	echo '```' > release.txt
-	cd $(BIN_DIR); sha1sum * >> release.txt
+	cd $(BIN_DIR); sha1sum * >> ../release.txt
 	echo '```' >> release.txt
 
 release:
