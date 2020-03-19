@@ -26,6 +26,7 @@ build:
 	echo '```' >> release.txt
 
 release:
+	go get -u github.com/tcnksm/ghr
 	echo $$RELEASE_VERSION
 	ghr -prerelease -n $$RELEASE_VERSION -body="$$(cat ./release.txt)" $$RELEASE_VERSION bin/
 
